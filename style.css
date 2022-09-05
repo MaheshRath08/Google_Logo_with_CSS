@@ -40,3 +40,37 @@ body{
     width: 0;
     height: 0;
 }
+.container{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+}
+input[type=checkbox]{
+    position: relative;
+    width: 80px;
+    height: 35px;
+    -webkit-appearance: none;
+    background-color: #000000;
+    border-radius: 20px;
+    cursor: pointer;
+}
+input[type=checkbox]::before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 35px;
+    background: url("https://thumbs.dreamstime.com/b/vector-night-sky-cartoon-illustration-background-bright-yellow-moon-stars-white-clouds-shining-dark-blue-backdrop-vector-132101831.jpg");    
+    background-size: contain;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 3px red;
+    transform: scale(1.1);
+    transition: left 0.2s ease-in-out;
+}
+input[type=checkbox]:checked::before{
+    left: 40px;
+    background: url("https://t3.ftcdn.net/jpg/02/50/08/68/360_F_250086872_srlXRqANYR2IbNfIylRDc3eMO9MinjnV.jpg");
+    background-size: contain;
+    transition: left 0.2s ease-in-out;
+}
